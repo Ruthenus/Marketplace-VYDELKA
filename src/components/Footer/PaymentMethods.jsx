@@ -1,3 +1,5 @@
+// src/components/Footer/PaymentMethods.jsx
+
 import React, {useState} from "react"
 import Modal from "./Modal.jsx"
 import {modalConfig} from "../../constants/modalConfig.js"
@@ -22,14 +24,16 @@ const PaymentMethods = () => {
         md:justify-start space-x-7 md:w-1/2">
           {/* Логотип MasterCard із можливістю відкриття модального вікна */}
           <img
-            src="src/assets/mastercard-logo.svg"
+            // src="src/assets/mastercard-logo.svg"
+            src="https://raw.githubusercontent.com/Ruthenus/Marketplace-VYDELKA/refs/heads/main/src/assets/mastercard-logo.svg"
             alt="MasterCard"
             className="h-11 cursor-pointer"
             onClick={() => setIsMasterCardModalOpen(true)}
           />
           {/* Логотип Visa із можливістю відкриття модального вікна */}
           <img
-            src="src/assets/visa-logo.svg"
+            // src="src/assets/visa-logo.svg"
+            src="https://raw.githubusercontent.com/Ruthenus/Marketplace-VYDELKA/refs/heads/main/src/assets/visa-logo.svg"
             alt="Visa"
             className="h-11 cursor-pointer"
             onClick={() => setIsVisaModalOpen(true)}

@@ -1,3 +1,5 @@
+// src/components/Footer/SocialLinks.jsx
+
 import React from "react"
 import {socialMediaLinks} from "../../constants/socialLinks.jsx"
 
@@ -23,7 +25,7 @@ const SocialLinks = ({className}) => {
             title={label} // підказка при наведенні
             className="hover:text-black cursor-pointer"
           >
-            {icon} {/* Значок соціальної мережі */}
+            {icon} {/* Піктограма соціальної мережі */}
           </a>
         ))}
       </div>

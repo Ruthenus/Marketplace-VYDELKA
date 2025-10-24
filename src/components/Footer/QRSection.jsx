@@ -1,3 +1,5 @@
+// src/components/Footer/QRSection.jsx
+
 import React from "react"
 
 // Компонент QRSection для відображення QR-коду та кнопок магазинів додатків
@@ -6,7 +8,8 @@ const QRSection = () => (
   <div className="flex space-x-4 items-center">
     {/* Зображення QR-коду для сканування */}
     <img
-      src="src/assets/futtersite_qr_code.png"
+      // src="src/assets/futtersite_qr_code.png"
+      src="https://raw.githubusercontent.com/Ruthenus/Marketplace-VYDELKA/refs/heads/main/src/assets/futtersite_qr_code.png"
       alt="QR Code"
       className="w-24 h-24"
     />
@@ -14,13 +17,15 @@ const QRSection = () => (
     <div className="flex flex-col space-y-3">
       {/* "Кнопка" для переходу до App Store */}
       <img
-        src="src/assets/button-appstore-ua.svg"
+        // src="src/assets/button-appstore-ua.svg"
+        src="https://raw.githubusercontent.com/Ruthenus/Marketplace-VYDELKA/refs/heads/main/src/assets/button-appstore-ua.svg"
         alt="App Store"
         className="w-28 md:w-32"
       />
       {/* "Кнопка" для переходу до Google Play */}
       <img
-        src="src/assets/button-google-play-ua.svg"
+        // src="src/assets/button-google-play-ua.svg"
+        src="https://raw.githubusercontent.com/Ruthenus/Marketplace-VYDELKA/refs/heads/main/src/assets/button-google-play-ua.svg"
         alt="Google Play"
         className="w-28 md:w-32"
       />

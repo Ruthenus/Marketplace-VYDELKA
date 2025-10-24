@@ -1,11 +1,13 @@
-import React, { createContext, useState, useEffect } from "react"
+// src/context/DeviceContext.jsx
+
+import React, {createContext, useState, useEffect} from "react"
 
 // Створення контексту для визначення типу пристрою (мобільний / десктоп)
 const DeviceContext = createContext()
 
 // Провайдер контексту, який відстежує ширину вікна та надає інформацію
 // про тип пристрою
-export const DeviceProvider = ({ children }) => {
+export const DeviceProvider = ({children}) => {
   // Стан для відстеження, чи є пристрій мобільним (ширина < 768px)
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
 
@@ -23,7 +25,7 @@ export const DeviceProvider = ({ children }) => {
 
   return (
     // Надання значення isMobile через контекст усім дочірнім компонентам
-    <DeviceContext.Provider value={{ isMobile }}>
+    <DeviceContext.Provider value={{isMobile}}>
       {children}
     </DeviceContext.Provider>
   )

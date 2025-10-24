@@ -1,10 +1,12 @@
+// src/constants/modalConfig.js
+
 // Конфігурація для модального вікна
 export const modalConfig = {
   // Об'єкт стилів для різних елементів модального вікна
   styles: {
-    // Стилі для фонового шару (оверлею) модального вікна
+    // Стилі для фонового шару, що перекриває сторінку під модальним вікном
     overlay: {
-      backgroundColor: "rgba(0, 0, 0, 0.75)",
+      backgroundColor: "rgba(0, 0, 0, 0.65)",
       zIndex: 1000,
       display: "flex",
       alignItems: "center",
@@ -13,20 +15,19 @@ export const modalConfig = {
       inset: 0,
       transition: "opacity 220ms ease-in-out",
       opacity: 1,
-      padding: "20px",
+      padding: "16px",
     },
     // Стилі для основного контейнера вмісту модального вікна
     content: {
-      backgroundColor: "#ffffff",
-      padding: "24px 28px",
-      borderRadius: "12px",
-      maxWidth: "760px",
+      backgroundColor: "#fefefe",
+      padding: "20px 24px",
+      borderRadius: "10px",
+      maxWidth: "680px",
       position: "relative",
       overflowY: "auto",
-      maxHeight: "86vh",
-      boxShadow: "0 18px 40px rgba(6, 24, 44, 0.45)",
-      border: "1px solid rgba(0,0,0,0.06)",
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      maxHeight: "80vh",
+      boxShadow: "0 12px 32px rgba(0, 0, 0, 0.3)",
+      border: "1px solid #dcdcdc",
       transition: "transform 240ms cubic-bezier(.2,.9,.3,1)",
       transform: "translateY(0)",
       WebkitFontSmoothing: "antialiased",
@@ -34,23 +35,24 @@ export const modalConfig = {
     },
     // Стилі для заголовка модального вікна
     header: {
-      fontSize: "20px",
-      fontWeight: 700,
-      color: "#0b3550",
-      margin: "0 0 14px 0",
-      textAlign: "center",
-      borderBottom: "1px solid rgba(15, 38, 56, 0.06)",
-      paddingBottom: "10px",
-      lineHeight: "1.1",
+      fontSize: "22px",
+      fontWeight: 600,
+      color: "#003366",
+      margin: "0 0 12px 0",
+      textAlign: "left",
+      borderBottom: "2px solid #e0e0e0",
+      paddingBottom: "8px",
+      lineHeight: "1.2",
     },
     // Стилі для кнопки закриття модального вікна
     closeButton: {
       position: "absolute",
-      top: "12px",
-      right: "12px",
+      top: "10px",
+      right: "10px",
       fontSize: "16px",
-      width: "36px",
-      height: "36px",
+      fontWeight: 700,
+      width: "32px",
+      height: "32px",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -58,16 +60,15 @@ export const modalConfig = {
       border: "none",
       cursor: "pointer",
       color: "#6b6b6b",
-      borderRadius: "6px",
+      borderRadius: "4px",
       transition: "background 140ms ease, color 140ms ease",
-      // hover styles should be applied where this config is consumed, e.g.:
-      // on hover: background: 'rgba(0,0,0,0.04)', color: '#333'
+      // hover styles — застосовуються в компоненті
     },
     // Стилі для текстового вмісту модального вікна
     contentText: {
-      fontSize: "15px",
-      color: "#222222",
-      lineHeight: "1.58",
+      fontSize: "14px",
+      color: "#333333",
+      lineHeight: "1.4",
       textAlign: "justify",
       whiteSpace: "pre-line",
       margin: 0,

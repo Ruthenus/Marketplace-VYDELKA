@@ -1,7 +1,10 @@
+// src/components/Footer/AccordionSection.jsx
+
 import React, {useState} from "react"
 import {footerSections} from "../../constants/footerSections.js"
 
-// Компонент AccordionSection для відображення секцій, що згортаються, у футері
+// Компонент AccordionSection для відображення секцій, що згортаються,
+// у нижній частині сторінки
 const AccordionSection = ({sections = footerSections}) => {
   // Стан для відстеження, яка секція відкрита
   const [openSection, setOpenSection] = useState(null)
@@ -27,7 +30,7 @@ const AccordionSection = ({sections = footerSections}) => {
             text-gray-800 text-[15px] font-medium"
           >
             {sec.title} {/* Заголовок секції */}
-            {/* Значок шеврона обертається залежно від стану openSection */}
+            {/* Піктограма шеврона обертається залежно від стану openSection */}
             <span
               className={`transform transition-transform ${
                 openSection === i ? "rotate-180" : "rotate-0"

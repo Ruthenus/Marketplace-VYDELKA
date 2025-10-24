@@ -1,7 +1,9 @@
+// src/components/Footer/SectionList.jsx
+
 import React from "react"
 import {footerSections} from "../../constants/footerSections.js"
 
-// Компонент SectionList для відображення списків секцій футера
+// Компонент SectionList для відображення списків секцій "підвалу"
 const SectionList = ({sections = footerSections}) => (
   // Фрагмент для групування елементів без додаткового DOM-вузла
   <>

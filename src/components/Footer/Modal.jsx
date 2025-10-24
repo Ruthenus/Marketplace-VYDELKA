@@ -1,3 +1,5 @@
+// src/components/Footer/Modal.jsx
+
 // Імпорт React та хука useEffect для роботи з побічними ефектами
 // Документація React: https://react.dev/reference/react
 // Документація useEffect: https://react.dev/reference/react/useEffect
@@ -9,10 +11,10 @@ import ReactDOM from "react-dom"
 import {modalConfig} from "../../constants/modalConfig.js"
 
 // Компонент Modal для відображення модального вікна з налаштуваннями
-// Пропси: isOpen (логічне значення для контролю відображення), onClose
-// (функція для закриття), title (заголовок модалки), children (вміст модалки)
+// Властивості: isOpen (логічне значення для контролю відображення), onClose
+// (функція для закриття), title (заголовок вікна), children (вміст вікна)
 const Modal = ({isOpen, onClose, title, children}) => {
-  // Хук useEffect для обробки натискання клавіші Escape для закриття модалки
+  // Хук useEffect для обробки натискання клавіші Escape для закриття вікна
   useEffect(() => {
     // Функція обробки події натискання клавіші Escape
     const handleEsc = (e) => {
@@ -25,7 +27,7 @@ const Modal = ({isOpen, onClose, title, children}) => {
     return () => window.removeEventListener("keydown", handleEsc)
   }, [isOpen, onClose])  // залежності ефекту: isOpen та onClose
 
-  // Якщо модальне вікно закрите, не рендеримо нічого
+  // Якщо модальне вікно закрите, нічого не відображаємо
   if (!isOpen) return null
 
   // Рендеринг модального вікна через портал для розміщення у вказаному DOM-вузлі
@@ -48,10 +50,10 @@ const Modal = ({isOpen, onClose, title, children}) => {
         style={{
           // Застосування стилів вмісту модального вікна
           ...modalConfig.styles.content,
-          // Анімація появи модалки
+          // Анімація появи модального вікна
           transform: isOpen ? "translateY(0)" : "translateY(10px)",
         }}
-        // Запобігання закриттю в разі клацання всередині модалки
+        // Запобігання закриттю в разі клацання всередині модального вікна
         onClick={(e) => e.stopPropagation()}
         // https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation
       >
@@ -61,7 +63,7 @@ const Modal = ({isOpen, onClose, title, children}) => {
         </button>
         {/* Заголовок модального вікна */}
         <h2 style={modalConfig.styles.header}>{title}</h2>
-        {/* Вміст модального вікна, переданий через пропс children */}
+        {/* Вміст модального вікна, переданий через вкладення children */}
         <div style={modalConfig.styles.contentText}>{children}</div>
       </div>
     </div>,

@@ -1,6 +1,9 @@
-/* Імпорт шрифтів Inter і Work Sans із Google Fonts */
+/* src/styles/globals.css */
+
+/* Імпорт шрифтів Inter, Work Sans і Montserrat із Google Fonts */
 /* Документація Google Fonts: https://developers.google.com/fonts/docs/css2 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Work+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
 
 /* Ініціалізація базових стилів Tailwind CSS */
 /* Документація Tailwind CSS: https://tailwindcss.com/docs/installation */

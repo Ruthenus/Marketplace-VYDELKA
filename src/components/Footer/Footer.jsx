@@ -1,3 +1,5 @@
+// src/components/Footer/Footer.jsx
+
 import React from "react"
 import {useDevice} from "../../context/useDevice.jsx"
 import SocialLinks from "./SocialLinks.jsx"
@@ -13,10 +15,10 @@ const Footer = () => {
   const {isMobile} = useDevice()
 
   return (
-    // Елемент футера зі стилями
+    // Компонент нижньої частини інтерфейсу (footer)
     <footer className="bg-neutral-100 text-gray-900 border-t-4
     border-green-600 mt-10">
-      {/* Контейнер для вмісту футера з максимальною шириною та відступами */}
+      {/* Контейнер для вмісту "підвалу" з максимальною шириною і відступами */}
       <div className="max-w-screen-2xl mx-auto px-10 py-8">
         {/* Макет для десктопів: відображається лише на немобільних пристроях
         (прихований на мобільних через md:grid) */}

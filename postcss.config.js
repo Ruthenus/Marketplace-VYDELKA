@@ -1,3 +1,5 @@
+// postcss.config.js
+
 /*
 Конфігурація PostCSS для обробки CSS у проєкті
 Ініціалізація: npx tailwindcss init -p
@@ -11,7 +13,7 @@ export default {
   plugins: {
     // Tailwind CSS для генерації утиліт
     tailwindcss: {},
-    // Autoprefixer для додавання вендорних префіксів до CSS
+    // Autoprefixer для додавання префіксів, специфічних для браузера, до CSS
     autoprefixer: {},
   },
 }
